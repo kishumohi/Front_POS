@@ -1,10 +1,14 @@
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
+import Customer from "./pages/master/customer.tsx";
 
 function App() {
   return (
     <>
-      <Home />
-      <p>working done</p>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/core/customer" element={<Customer />} />
+      </Routes>
     </>
   );
 }
